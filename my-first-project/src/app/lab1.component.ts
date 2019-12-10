@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'lab1',
   template: `
-    <input #str (keyup)="update(str.value)">
+    <input #str (keyup)="0">
 
     <button (click)="str.value=''">Clear</button>
 
