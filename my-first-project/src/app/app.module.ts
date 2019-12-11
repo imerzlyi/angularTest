@@ -19,6 +19,7 @@ import { OddComponent } from './odd/odd.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [OddComponent, EvenComponent]
 })
 export class AppModule { }

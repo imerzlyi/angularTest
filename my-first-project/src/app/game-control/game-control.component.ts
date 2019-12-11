@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { setInterval, clearInterval } from 'timers';
+//import { clearInterval } from 'timers';
 
 @Component({
   selector: 'app-game-control',
