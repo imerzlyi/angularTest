@@ -1,0 +1,7 @@
+<h1>Active users:</h1>
+<ul>
+    <li *ngFor="let user of users" (click)="onSelect(user)" [class.selected]="user === selectedUser">
+        {{user.name}}
+    </li>
+</ul>
+<button (click)="setToInactive()">Set to inactive</button>
