@@ -1,0 +1,11 @@
+<div>
+    <p>Name: <input #name type="text"/></p>
+    <p>Status: <input #status type="text"/></p>
+    <button (click)="onAdd(name.value, status.value)">Add</button>
+</div>
+<table width="50%" cellspacing="0" cellpadding="5">
+    <tr> 
+        <td width="20%" valign="top"><app-active-users></app-active-users></td>
+        <td width="20%" valign="top"><app-unactive-users></app-unactive-users></td>
+    </tr>
+</table>
