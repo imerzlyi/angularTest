@@ -1,21 +1,18 @@
-<table>
-    <tr>
-        <td>Name:</td>
-        <td>
-            <input type="text" [(ngModel)]="name"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Author:</td>
-        <td>
-            <input type="text" [(ngModel)]="author"/>
-        </td>
-    </tr>
-    <tr>
-        <td>Year:</td>
-        <td>
-            <input type="number" [(ngModel)]="year"/>
-        </td>
-    </tr>
-</table>
-<button (click)="onAddClick()">Add</button>
+<form #myForm="ngForm">
+    <div class="form-group">
+        <label>Name:</label>
+        <input class="form-control" name="nameInput" [(ngModel)]="name" #nameInput="ngModel" required pattern="[A-Z][A-Za-z ]*"/>
+    </div>
+    <div class="form-group">
+        <label>Author:</label>
+        <input class="form-control" name="authorInput" [(ngModel)]="author" #authorInput="ngModel" required />
+    </div>
+    <div class="form-group">
+        <label>Year</label>
+        <input class="form-control" name="yearInput" [(ngModel)]="year" #yearInput="ngModel" 
+            required pattern="[0-9]*" />
+    </div>
+    <div class="form-group">
+        <button [disabled]="nameInput.invalid || authorInput.invalid || yearInput.invalid" (click)="onAddClick()">Add</button>
+    </div>
+</form>
