@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>
+            <input type="text" [(ngModel)]="name"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Author:</td>
+        <td>
+            <input type="text" [(ngModel)]="author"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Year:</td>
+        <td>
+            <input type="number" [(ngModel)]="year"/>
+        </td>
+    </tr>
+</table>
+<button (click)="onAddClick()">Add</button>
